@@ -1,0 +1,22 @@
+Lesson 1 Reflections
+1. We don't need to do a manual analysis line by line to view where the change occured.
+
+2. Just putting diff command pinpoints us to the difference between the files.
+
+3.How could having easy access to the entire history of a file make you a more efficient programmer in the long term?- Figuring out mistakes- maybe we did somethings right last time which we didnt do correct
+
+4. What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?-
+PROS- 1.My code, my choice 2.Only I know when I need to actually commit- maybe I want to fix the full bug before commit- so be it. 3.If commit happens regularly at fixed intervals then there might be compilation errors.
+CONS- 1.May lose your work if you don't commit often- like say we are working for one week on a feature and suddenly the power goes out so we need to save that work before or that is lost.  2.Saves the programmer the time and mental cycles involved if he has to commit everytime he enters a single piece of code
+
+5. How can you use the commands git log and git diff to view the history of files?
+For git log - 1.Goto code directory. 2.type "git log" 3.use down/enter to go down into the log, if you want top get out press "q"
+For git diff - 1.Get ids of 2 commits- diff1 and diff2- where diff1 comes earlier and then diff2. 2.Type "git diff diff1 diff2"
+
+6. How might using version control make you more confident to make changes that could break something?
+Suppose I am confident that in the commit, say diff6, there was no error introduced, then I can checkout the versions later to that commit- say  diff5, diff4, etc. and keep on going till we spot the commit in which the error was actually introduced. The syntax for checkout is "git checkout diff1", where diff1 is the ID of the commit.
+
+7.Now that you have your workspace set up, what do you want to try using Git for?
+Code mainly, to put my dev work on github.
+
+
