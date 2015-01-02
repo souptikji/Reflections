@@ -1,0 +1,9 @@
+Lesson 2 reflections-
+
+1. 
+What happens when you initialize a repository? Why do you need to do it?
+To initialize a repository- "git init" after you enter that repository.
+When we initialize a repository following things happen - 1. a '.git' file is created- it has the metadata. 2. A message shows on your git bash- "Initialized empty Git repository in c:/version-control/reflections/.git/".  
+
+2.How is the staging area different from the working directory and the repository? What value do you think it offers?
+Staging Area is an intermediate between working directory and repository, First the commits need to be added to the staging area- and only after that can we finally commit it to repository. Benefit- We can put 2/more files in a single commit- one logical change per commit- if we use the intermediate staging area. Then we can commit the entire commit to the repository. Otherwise if there were no staging area then we would need to one file per commit only.
