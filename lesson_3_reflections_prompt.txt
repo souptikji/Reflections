@@ -1,0 +1,2 @@
+1.When would you want to use a remote repository rather than keeping all your work local?
+a)So that we can have more developers working on a same project b)Even if my local copy is lost then we can still access the code.
