@@ -7,3 +7,23 @@ When we initialize a repository following things happen - 1. a '.git' file is cr
 
 2.How is the staging area different from the working directory and the repository? What value do you think it offers?
 Staging Area is an intermediate between working directory and repository, First the commits need to be added to the staging area- and only after that can we finally commit it to repository. Benefit- We can put 2/more files in a single commit- one logical change per commit- if we use the intermediate staging area. Then we can commit the entire commit to the repository. Otherwise if there were no staging area then we would need to one file per commit only.
+
+3.How can you use the staging area to make sure you have one commit per logical change?
+a) make whatever changes you want to make, say to files f1,f2,f3. To verify if all the 3 changes are correct (and assuming we have nothing yet on the staging area), we can compare the staging area (which as per our assumption is consistent with the latest commits in the repository) and the working directory by "git diff". This should show only the changes as f1,f2 and f3.
+b) S'pose I want to commit only f1 and f2. So I will add only those both to staging area by "git add f1"; "git add f2".
+c) Verify if these were the changes you wanted to make by comparing the staging area changes to the latest commit in repository by "git diff --staged"
+d)If every thing goes right, then commit by "git commit" to commit these 2 files- you will be asked to provide an optional commit message.
+e) If I want to discard the remaining changes on the staging area and the working directory then I can reset by using "git reset --hard". This is analogous to the "Refresh sandbox and remote changes" we find in RTC. <This is optional>
+
+4.What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+When you want to have 2-3 projects running in parallel- and then can finally merge those changes.
+
+5.How do the diagrams help you visualize the branch structure?
+Because by using "git log" on each branch, we have to manually check the point of diversion.
+
+6.What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+Merging 2 branches together means accepting all commits of the other branch to the main branch. We represent it by closing the 2 branches because that is what we are doing.
+
+7.What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Pros: doesn't need manual intervention, saves time
+Cons: Doesn't ask for user inputs while merging, user knows best which version to keep
